@@ -108,7 +108,7 @@ jQuery(document).ready(function(){
   }); 
 
   function add_marker( $marker, map ) {
-    var image = 'http://res.cloudinary.com/bulldog-yoga/image/upload/v1491335714/bulldogpin_yzb4gn.png';    
+    var image = 'custom map marker path';    
 	  var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
     var marker = new google.maps.Marker({
 		  position	: latlng,
@@ -147,7 +147,7 @@ jQuery(document).ready(function(){
 	  }
   }
 
-  jQuery('.acf-map').each(function(){
+  jQuery('.acf-map').each(function(){ // change to whatever class your container div is
     // create map
     map = new_map( jQuery(this) );
   });
